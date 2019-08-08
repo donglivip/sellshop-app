@@ -1,0 +1,377 @@
+{
+    "@platforms" : [ "android", "iPhone", "iPad" ],
+    "id" : "H5998E5D3", /*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name" : "商家端", /*应用名称，程序桌面图标名称*/
+    "version" : {
+        "name" : "1.0.3", /*应用版本名称*/
+        "code" : ""
+    },
+    "description" : "", /*应用描述信息*/
+    "icons" : {
+        "72" : "icon.png"
+    },
+    "launch_path" : "index.html", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer" : {
+        "name" : "", /*开发者名称*/
+        "email" : "", /*开发者邮箱地址*/
+        "url" : "" /*开发者个人主页地址*/
+    },
+    "permissions" : {
+        "Cache" : {
+            "description" : "管理应用缓存"
+        },
+        "Console" : {
+            "description" : "跟踪调试输出日志"
+        },
+        "Events" : {
+            "description" : "应用扩展事件"
+        },
+        "Payment" : {},
+        "Bluetooth" : {}
+    },
+    "plus" : {
+        "splashscreen" : {
+            "autoclose" : true, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting" : true /*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
+        },
+        "popGesture" : "close", /*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+        "runmode" : "normal", /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature" : "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==", /*可选，保留给应用签名，暂不使用*/
+        "distribute" : {
+            "plugins" : {
+                "payment" : {
+                    "alipay" : {
+                        "description" : "阿里支付",
+                        "scheme" : ""
+                    },
+                    "weixin" : {
+                        "description" : "微信支付",
+                        "appid" : "wx0b6eba4a2c06dba7"
+                    }
+                }
+            },
+            "apple" : {
+                "appid" : "", /*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision" : "", /*iOS应用打包配置文件*/
+                "password" : "", /*iOS应用打包个人证书导入密码*/
+                "p12" : "", /*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices" : "universal", /*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks" : [] /*调用Native.js调用原生Objective-c API需要引用的FrameWork，如需调用GameCenter，则添加"GameKit.framework"*/
+            },
+            "google" : {
+                "packagename" : "", /*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore" : "", /*Android应用打包使用的密钥库文件*/
+                "password" : "", /*Android应用打包使用密钥库中证书的密码*/
+                "aliasname" : "", /*Android应用打包使用密钥库中证书的别名*/
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>"
+                ]
+            },
+            /*使用Native.js调用原生安卓API需要使用到的系统权限*/
+            "orientation" : [ "portrait-primary" ], /*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons" : {
+                "ios" : {
+                    "prerendered" : true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+
+                    /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone" : {
+                        "normal" : "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+                        "retina" : "", /*iPhone4程序图标，分辨率：114x114*/
+
+                        /*iPhone4S/5/6程序图标，分辨率：120x120*//*iPhone6 Plus程序图标，分辨率：180x180*/
+                        "spotlight-normal" : "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina" : "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+
+                        /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal" : "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+
+                        /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png" /*iPhone6Plus设置页面程序图标，分辨率：87x87*/
+                    },
+                    "ipad" : {
+                        "normal" : "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina" : "", /*iPad高分屏程序图标，分辨率：144x144*/
+
+                        /*iPad iOS7程序图标，分辨率：76x76*//*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal" : "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina" : "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+
+                        /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*//*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*//*iPad设置页面程序图标，分辨率：29x29*/
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
+                    },
+                    "appstore" : "unpackage/res/icons/1024x1024.png"
+                },
+                "android" : {
+                    "mdpi" : "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi" : "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi" : "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi" : "unpackage/res/icons/96x96.png", /*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png" /*1080P 高分屏程序图标，分辨率：144x144*/
+                }
+            },
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "default" : "", /*iPhone3启动图片选，分辨率：320x480*/
+                        "retina35" : "", /*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40" : "", /*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+                        "retina47" : "F:/word/sell-user/logo/750#1334.png", /*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+                        "retina55" : "F:/word/sell-user/logo/1242#2209.png", /*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+                        "retina55l" : "",
+                        "iphonex" : "F:/word/sell-user/logo/1125#2437.png" /*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
+                    },
+                    "ipad" : {
+                        "portrait" : "", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina" : "", /*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape" : "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina" : "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7" : "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7" : "", /*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7" : "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7" : "" /*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
+                    }
+                },
+                "android" : {
+                    "mdpi" : "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi" : "", /*大屏启动图片，分辨率：320x442*/
+                    "hdpi" : "F:/word/sell-user/logo/480#762.png", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi" : "F:/word/sell-user/logo/720#1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi" : "F:/word/sell-user/logo/1080#1882.png" /*1080P高分屏启动图片，分辨率：1080x1882*/
+                }
+            }
+        }
+    },
+    "dependencies" : {
+        "pages" : {
+            "index.html" : {
+                "resources" : [
+                    "static/js/vendor.f5dd31ad79c301c4d477.js",
+                    "static/js/app.99844ed9896030b52d09.js",
+                    "static/js/manifest.522e5aff49bd65ebb407.js",
+                    "static/css/app.0901b5155aa6792dc10b8286d907ba9b.css",
+                    "static/js/app.7cd85ca81b8ce3727b8d.js",
+                    "static/js/manifest.3fb88fc0397c035c30ff.js",
+                    "static/js/vendor.94733458928bb6b365c2.js",
+                    "static/css/app.3c20f26f3bc68f103b7ac1a3e8be6464.css",
+                    "static/css/app.d0b484dcffa9cfcdcde9e2f6bb9fdea8.css",
+                    "static/js/manifest.944af87beba63e85afab.js",
+                    "static/js/app.6d6cbb2deb8674e0250b.js"
+                ],
+                "refer" : [],
+                "priority" : 0
+            }
+        },
+        "idle" : {
+            "resources" : [
+                "static/end.png",
+                "static/js/17.6887289191bf87fe1a6b.js.map",
+                "static/js/14.1b94c27ddc8e1d114a24.js",
+                "static/meun-us.png",
+                "static/down.png",
+                "static/js/49.2c3d193851e3eb3bc868.js.map",
+                "static/js/2.7e5c3237462948843a8c.js.map",
+                "static/start.png",
+                "static/js/38.c280ed5ad989cc06138c.js",
+                "static/add.png",
+                "static/js/39.3e97d41347230b0ed6eb.js.map",
+                "static/img/backimg.21481e8.png",
+                "static/ok-no.png",
+                "static/js/40.43c70c4c0491f1265e9c.js.map",
+                "static/meun-order.png",
+                "static/img/driver_icon.f16ecfd.jpg",
+                "static/delet-no.png",
+                "static/js/7.b53ed2172efcc1359f5a.js.map",
+                "static/jian_03.png",
+                "static/next-no.png",
+                "static/js/42.b23967220497b58aff5b.js",
+                "static/js/12.bc34960908484941b6e5.js",
+                "static/qucan.png",
+                "static/open.png",
+                "static/orderdetail_03.png",
+                "static/js/23.6272c437e229b63f1323.js",
+                "static/js/29.b7fef52f3443ca8996cf.js.map",
+                "static/meun-user.png",
+                "logo/480.png",
+                "static/js/18.8808b2b6fac392011443.js",
+                "logo/logo.png",
+                "static/js/18.8808b2b6fac392011443.js.map",
+                "static/js/21.a9d5f299c4bb8cf82ad5.js",
+                "static/js/19.68b09ffefe9cfbe165b2.js",
+                "logo/1080x1882.png",
+                "static/sho.png",
+                "static/meun-phone.png",
+                "static/yes.png",
+                "static/aa_03.png",
+                "static/js/22.4931fa240692b911e286.js.map",
+                "static/js/30.89c8866650a6f1089168.js.map",
+                "static/js/vendor.f5dd31ad79c301c4d477.js.map",
+                "static/delete.png",
+                "static/js/3.167b4860a617619b8024.js.map",
+                "static/arr02.png",
+                "static/login_07.png",
+                "static/js/26.178d950f55b97fd7200b.js",
+                "static/js/35.32aaea65c1d3b3a650c2.js",
+                "static/backwhite.png",
+                "static/js/5.4c4e17d82f23603dd9d0.js",
+                "static/arrright.png",
+                "static/js/11.902e2f815130d5e513c4.js",
+                "static/haveorder.png",
+                "static/rider.png",
+                "static/js/50.b63fba7653c8118bfaae.js",
+                "static/js/14.1b94c27ddc8e1d114a24.js.map",
+                "static/setting.png",
+                "static/img/logo.044666e.png",
+                "static/js/38.c280ed5ad989cc06138c.js.map",
+                "Group 6 Copy 4@2x.png",
+                "static/js/0.ce5b137ed7ae109ca035.js",
+                "static/orderhistory_03.png",
+                "static/vipcart02.png",
+                "static/js/10.a104071a05003b0c6609.js.map",
+                "static/js/manifest.522e5aff49bd65ebb407.js.map",
+                "static/js/48.534c8663df27d0edecc6.js",
+                "static/js/20.37f4a4c94d88748ce7d5.js.map",
+                "static/wait.png",
+                "static/js/3.167b4860a617619b8024.js",
+                "static/detail_03.png",
+                "static/index-my.png",
+                "static/activity.png",
+                "static/js/29.b7fef52f3443ca8996cf.js",
+                "static/js/47.414135077fcfc4507c8a.js",
+                "static/js/34.55698881ea051429a980.js.map",
+                "static/css/app.0901b5155aa6792dc10b8286d907ba9b.css.map",
+                "static/js/9.910bba45b1caa121ed7c.js.map",
+                "static/aa_12.png",
+                "static/meun-new.png",
+                "static/img/2.e0cbd37.png",
+                "static/js/27.aaa945e4f9ae24806f6d.js.map",
+                "logo/720.png",
+                "static/js/19.68b09ffefe9cfbe165b2.js.map",
+                "static/js/25.08ed26d27f51103f5eaf.js.map",
+                "static/js/11.902e2f815130d5e513c4.js.map",
+                "static/js/8.0742bac9c00d2cb68728.js.map",
+                "static/star-no.png",
+                "static/js/4.f62ca4296c52e20041ac.js",
+                "static/js/46.cfceb73244b8d3ba74a5.js.map",
+                "static/back.png",
+                "static/backimg.png",
+                "static/js/42.b23967220497b58aff5b.js.map",
+                "static/js/43.5e2a4d1f0f1c883a1282.js.map",
+                "static/js/49.2c3d193851e3eb3bc868.js",
+                "static/js/12.bc34960908484941b6e5.js.map",
+                "static/js/27.aaa945e4f9ae24806f6d.js",
+                "static/addrating.png",
+                "static/js/39.3e97d41347230b0ed6eb.js",
+                "static/star.png",
+                "static/packing.png",
+                "static/js/0.ce5b137ed7ae109ca035.js.map",
+                "static/js/37.3c05a67b86e2b25c2dbe.js.map",
+                "static/logo.png",
+                "static/js/28.42b88a120510986b1c28.js.map",
+                "static/js/43.5e2a4d1f0f1c883a1282.js",
+                "static/js/16.2f0dca59e469c00a880c.js",
+                "static/js/28.42b88a120510986b1c28.js",
+                "static/arrleft.png",
+                "logo/logo02.png",
+                "static/js/40.43c70c4c0491f1265e9c.js",
+                "static/js/41.b4db234571fa865ede5d.js",
+                "static/js/36.40b195f60375f42d8966.js.map",
+                "static/login_10.png",
+                "static/js/24.0e137c5fcc0abbf43c74.js",
+                "static/js/6.7320b8a858bfec8379c8.js",
+                "static/js/46.cfceb73244b8d3ba74a5.js",
+                "static/js/13.6978a3cd8dd71ee1f0ea.js.map",
+                "static/js/4.f62ca4296c52e20041ac.js.map",
+                "static/js/1.3ab2be9af0fa1a5ca650.js.map",
+                "static/js/34.55698881ea051429a980.js",
+                "static/js/41.b4db234571fa865ede5d.js.map",
+                "static/js/31.007a05f9114d88b579ad.js",
+                "static/js/24.0e137c5fcc0abbf43c74.js.map",
+                "static/js/15.f327155dc5c169d1fb49.js.map",
+                "static/meun-money.png",
+                "static/js/2.7e5c3237462948843a8c.js",
+                "static/js/13.6978a3cd8dd71ee1f0ea.js",
+                "static/js/1.3ab2be9af0fa1a5ca650.js",
+                "static/js/36.40b195f60375f42d8966.js",
+                "static/js/17.6887289191bf87fe1a6b.js",
+                "logo/1080.png",
+                "static/search.png",
+                "static/aa_12_no.png",
+                "static/js/47.414135077fcfc4507c8a.js.map",
+                "static/js/10.a104071a05003b0c6609.js",
+                "static/adver.png",
+                "static/js/5.4c4e17d82f23603dd9d0.js.map",
+                "static/js/9.910bba45b1caa121ed7c.js",
+                "static/js/26.178d950f55b97fd7200b.js.map",
+                "static/question.png",
+                "static/login_14.png",
+                "static/bgimg.png",
+                "static/js/6.7320b8a858bfec8379c8.js.map",
+                "static/js/25.08ed26d27f51103f5eaf.js",
+                "static/js/33.881e75416bb883a2c55e.js",
+                "static/js/48.534c8663df27d0edecc6.js.map",
+                "static/js/8.0742bac9c00d2cb68728.js",
+                "static/js/20.37f4a4c94d88748ce7d5.js",
+                "static/shop.png",
+                "static/js/15.f327155dc5c169d1fb49.js",
+                "static/js/37.3c05a67b86e2b25c2dbe.js",
+                "static/js/33.881e75416bb883a2c55e.js.map",
+                "static/js/50.b63fba7653c8118bfaae.js.map",
+                "static/js/35.32aaea65c1d3b3a650c2.js.map",
+                "static/js/31.007a05f9114d88b579ad.js.map",
+                "static/js/32.8e3738f6fb390312e479.js",
+                "static/js/32.8e3738f6fb390312e479.js.map",
+                "static/next.png",
+                "static/staff.png",
+                "static/vipcart.png",
+                "static/js/7.b53ed2172efcc1359f5a.js",
+                "static/js/23.6272c437e229b63f1323.js.map",
+                "static/js/16.2f0dca59e469c00a880c.js.map",
+                "static/js/30.89c8866650a6f1089168.js",
+                "static/peisong-no.png",
+                "static/js/app.99844ed9896030b52d09.js.map",
+                "static/js/21.a9d5f299c4bb8cf82ad5.js.map",
+                "static/freight.png",
+                "static/js/22.4931fa240692b911e286.js",
+                "static/delet.png",
+                "static/2.png",
+                "static/driver_icon.jpg",
+                "static/meun-setting.png",
+                "static/img/wait.b405800.png"
+            ]
+        }
+    },
+    "fullscreen" : false
+}
